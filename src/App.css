@@ -1,0 +1,96 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: inherit;
+  padding-bottom: 10vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.App__bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  background-color: #4d2f43;
+  color: #CBD4E7;
+  position: fixed;
+  bottom: 0;
+  height: 10vh;
+  min-height: 36px;
+  z-index: 99;
+}
+
+.App__bottom>* {
+  position: relative;
+  margin: 0 0.5rem 0 0.5rem;
+  padding: 0 1.5rem;
+  height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .App__bottom {
+    justify-content: space-between;
+  }
+  .App__bottom>* {
+    margin: 0 0.1rem 0 0.1rem;
+    padding: 0 0.3rem;
+  }
+}
+
+.App__bottom a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  text-decoration: none;
+}
+
+.App__bottom a img, .App__bottom a svg {
+  margin: 0 auto 1rem auto;
+  padding: 0;
+}
+
+@media screen and (max-height: 700px) {
+  .App__bottom {
+    justify-content: space-between;
+  }
+  .App__bottom a img, .App__bottom a svg {
+    height: 24px;
+    width: 24px;
+    margin-bottom: 7px;
+  }
+  .App__bottom a span {
+    font-size: xx-small;
+  }
+}
+
+.App__bottom a span {
+  text-transform: uppercase;
+  font-size: x-small;
+  text-align: center;
+}
+
+.App__bottom a:visited {
+  color: inherit;
+}
+
+.App__bottom .cur {
+  background-color: #cc2a25;
+}
+
+.App__bottom .cur * {
+  color: #ffffff;
+}
+
+.App__bottom svg, .App__bottom img {
+  height: 32px;
+  width: 32px;
+  transform: translateY(33%);
+  display: block;
+  margin: 0 auto;
+}
+
+.App__bottom svg * {
+  fill: #CBD4E7;
+}

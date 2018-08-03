@@ -1,0 +1,173 @@
+/* Home.css */
+
+.Home {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    min-height: inherit;
+    background-color: #f3f3f3;
+}
+
+.Home__intro {
+    padding: 2.5vh 5vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "title title" "blurb blurb" "analy analy" "imple imple" "autom autom" "every every";
+    grid-gap: 0.6666rem 2.4444rem;
+}
+
+@media screen and (max-width: 740px) {
+    .Home__intro {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: "title" "blurb" "analy" "imple" "autom" "every";
+    }
+}
+
+.Home__intro h1 {
+    grid-area: title;
+    font-weight: 600;
+}
+
+.Home__intro div h3 {
+    text-transform: uppercase;
+    font-size: 87.5%;
+}
+
+.Home__intro div p {
+    font-size: 87.5%;
+    text-align: justify;
+}
+
+.Home__intro .blurb {
+    grid-area: blurb;
+    line-height: 1.75rem;
+    font-size: 115%;
+}
+
+.Home__intro abbr {
+    text-decoration-color: rgba(0, 0, 0, 0.225);
+}
+
+.Home__thomas {
+    position: relative;
+    min-width: 45vw;
+    color: white;
+    overflow: hidden;
+    -webkit-mask-image: url('mask.png');
+    -moz-mask-image: url('mask.png');
+    mask-image: url('mask.png');
+    -webkit-mask-position: center right;
+    -moz-mask-position: center right;
+    mask-position: center center;
+    -webkit-mask-size: auto 100%;
+    -moz-mask-size: auto 100%;
+    mask-size: auto 100%;
+    -webkit-mask-repeat: no-repeat;
+    -moz-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.Home__thomas::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #87807e;
+    background-image: url('pumpkin2.jpg');
+    background-size: cover;
+    /* center on eyes */
+    background-position: 53% 33%;
+    filter: brightness(100%);
+    animation-name: zoom;
+    -webkit-animation-name: zoom;
+    /* match human resting breathing rate */
+    animation-duration: 8.87s;
+    -webkit-animation-duration: 8.87s;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    z-index: 0;
+}
+
+.Home__thomas .myname {
+    z-index: 2;
+    position: absolute;
+    padding: 0;
+    margin: 0 0 4.5vw 4.5vw;
+    box-sizing: border-box;
+    bottom: 14.125vh;
+}
+
+.Home__thomas h2 {
+    margin: 0.05em 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0px 0px 10px rgba(3, 4, 5, 0.5);
+}
+
+@media screen and (max-width: 487px) {
+    .Home_thomas h2 {
+        bottom: 18.125vh;
+        font-size: 1.45rem;
+    }
+}
+
+.Home__thomas h3 {
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 0.75rem;
+    margin: 0.05em 0;
+    letter-spacing: 0.05rem;
+    text-shadow: 0px 0px 5px rgba(3, 4, 5, 0.5);
+}
+
+@media screen and (max-width: 740px) {
+    .Home {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .Home__thomas {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 20rem;
+        color: white;
+        overflow: hidden;
+        -webkit-mask-image: none;
+        -moz-mask-image: none;
+        mask-image: none;
+    }
+    .Home__thomas .myname {
+        bottom: 1vh;
+    }
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.025);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+@-webkit-keyframes zoom {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.025);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}

@@ -1,0 +1,22 @@
+/* Resume.css */
+
+.Resume {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: url('resume.png') no-repeat center top;
+    background-size: contain;
+    height: 100vh;
+    animation: fadein 0.15s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0.85;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.00);
+    }
+}

@@ -1,0 +1,12 @@
+/* Portfolio.css */
+
+.Portfolio .comingSoon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(145, 182, 207);
+    margin: 0;
+    padding: 0;
+    font-size: xx-large;
+}
