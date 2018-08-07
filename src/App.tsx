@@ -7,12 +7,12 @@ import {
 import './App.css';
 import Home from './Home';
 import Message from './Message';
-import message from './message.svg';
 import Portfolio from './Portfolio';
-import portfolio from './portfolio.svg';
-import profile from './profile.svg';
 import Resume from './Resume';
-import resume from './resume.svg';
+import message from './svg/message.svg';
+import portfolio from './svg/portfolio.svg';
+import profile from './svg/profile.svg';
+import resume from './svg/resume.svg';
 
 class App extends React.Component {
   public render() {

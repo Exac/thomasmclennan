@@ -1,7 +1,10 @@
 import * as React from 'react';
-import mailsuccess from './mailsuccess.svg';
+import stamp from './img/stamp.png';
 import './Message.css';
-import send from './send.svg';
+import letterBack from './svg/letter-back.svg';
+import letterClosed from './svg/letter-closed.svg';
+import letterFront from './svg/letter-front.svg';
+import send from './svg/send.svg';
 
 
 interface IState {
@@ -59,17 +62,21 @@ class Message extends React.Component<{}, IState> {
         this.setState({ email: '' });
         this.setState({ message: '' });
         this.sent = true;
-
+        setTimeout(() => { this.sent = false }, 6500);
     }
 
     public render() {
         return (
             <div className={"Message " + (this.sent ? "sent" : "")}>
-                <video autoPlay={true} muted={true} loop={true} id="Message__bgvid">
-                    <source src="field.mp4" type="video/mp4" />
+                <video playsInline={true} autoPlay={true} muted={true} loop={true} id="myVideo"
+                    style={{ position: 'fixed', left: 0, bottom: 0, minHeight: '100%', minWidth: '100%', animation: 'plane 10s ease-in-out infinite', zIndex:-1, pointerEvents: 'none'  }}>
+                    <source src="plane.mp4" type="video/mp4" />
                 </video>
+                <img className="Message__letterBack" src={letterBack} />
+                <img className="Message__letterClosed" src={letterClosed} />
+                <img className="Message__letterFront" src={letterFront} />
                 <form className="Message__form" method="post" action="https://morning-crag-49607.herokuapp.com/message">
-                    <h2 className="Message__formTitle">Send me a message</h2>
+                    <h2 className="Message__formTitle">Write me a message</h2>
                     <input
                         className="Message__formEmail"
                         value={this.state.email}
@@ -77,7 +84,6 @@ class Message extends React.Component<{}, IState> {
                         type="email"
                         name="email"
                         required={true}
-                        autoFocus={true}
                         placeholder="your-email@example.com" />
                     <textarea
                         className="Message__formMessage"
@@ -85,15 +91,19 @@ class Message extends React.Component<{}, IState> {
                         onChange={this.handleChange}
                         name="message"
                         required={true}
+                        rows={7}
                         placeholder="Hi, my name is John, and I'm..." />
                     <button className="Message__formSubmit" onClick={this.handleSubmit} type="button">
                         <object className="send" type="image/svg+xml" data={send} />
                         <div><span>Send</span></div>
                     </button>
+                    <img className="Message__stamp" src={stamp} />
                     <p className="Message__formDescription">
                         <span />
                     </p>
-                    <h2 className="how__title">How I'll see it</h2>
+                </form>
+                {/* <div className="success">
+                    <p>Your message successfully sent!<br /><img style={{ 'width': '4rem', 'padding': '2rem' }} src={mailsuccess} /></p>
                     <div className="Message__how">
                         <div className="how__top">
                             <span className="how__hold" />
@@ -134,12 +144,8 @@ class Message extends React.Component<{}, IState> {
                             <div className="how__hold">Forward</div>
                         </div>
                     </div>
-
-                </form>
-                <div className="success">
-                    <p>Your message successfully sent!<br /><img style={{ 'width': '4rem', 'padding': '2rem' }} src={mailsuccess} /></p>
-                </div>
-            </div>
+                </div> */}
+            </div >
         )
     }
 }

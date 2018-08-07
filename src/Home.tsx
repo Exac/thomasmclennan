@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 class Home extends React.Component<any, any> {
@@ -37,7 +38,7 @@ class Home extends React.Component<any, any> {
                         <h3 style={{color:'#004d40'}}>Everything Else</h3>
                         <p>Keeping up with technology is so important. Machine Learning? Relational 
                         Databases? <abbr title="Americans with Disabilities Act">ADA</abbr> compliance? 
-                        Mobile apps? Leadership? I've got you covered - get in touch.</p>
+                        Mobile apps? Leadership? I've got you covered - <Link to="/message">get in touch</Link>.</p>
                     </div>
                 </section>
             </div>

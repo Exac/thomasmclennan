@@ -15,6 +15,12 @@ a, [href] {
   text-decoration-skip-ink: auto;
 }
 
+a:visited,
+[href]:visited,
+link:visited {
+  color: #4d2f43;
+}
+
 #root {
   min-height: 100vh;
   display: flex;
@@ -23,4 +29,12 @@ a, [href] {
 
 .spacer {
   flex-grow: 1;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }

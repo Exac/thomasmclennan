@@ -1,12 +1,93 @@
 /* Portfolio.css */
 
-.Portfolio .comingSoon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: rgb(145, 182, 207);
-    margin: 0;
-    padding: 0;
-    font-size: xx-large;
+.Portfolio {
+    background-color: white;
+}
+
+.name {
+    grid-area: name;
+}
+
+.description {
+    grid-area: description;
+}
+
+.image {
+    grid-area: image;
+}
+
+.Portfolio>section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "name image" "name description";
+    padding: 100px 2rem 100px 2rem;
+    grid-gap: 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.Portfolio>section:nth-child(2n-1) {
+    background-color: rgba(128, 128, 128, 0.125);
+}
+
+.image img,
+.image picture,
+.image picture *{
+    width: 100%;
+    max-width: 100%;
+}
+
+.Portfolio>section>section {
+    overflow: hidden;
+}
+
+.Portfolio>section>section.name ul {
+    list-style-type: none;
+    padding-left: unset;
+    max-width: 34rem;
+}
+
+.Portfolio>section>section.name li {
+    float: left;
+    padding: 0.25rem;
+    margin: 0.25rem;
+    background-color: rgba(128, 128, 128, 0.125);
+    background-blend-mode: darken;
+    border-radius: 1rem;
+    line-height: 2.5rem;
+}
+
+.Portfolio a.code,
+.Portfolio a.live {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin: 0 0.25rem;
+    transition: 0.12s ease all;
+}
+
+.Portfolio a.code:hover,
+.Portfolio a.live:hover {
+    transform: scale(1.05);
+}
+
+.Portfolio a[href=""] {
+    display: none;
+}
+
+.Portfolio a.live {
+    background-image: url('svg/redlink.svg');
+}
+
+.Portfolio a.code {
+    background-image: url('svg/redgithublogo.svg');
+}
+
+@media screen and (max-width: 800px) {
+    .Portfolio>section {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "image image" "name description";
+    }
 }

@@ -56,9 +56,9 @@
     min-width: 45vw;
     color: white;
     overflow: hidden;
-    -webkit-mask-image: url('mask.png');
-    -moz-mask-image: url('mask.png');
-    mask-image: url('mask.png');
+    -webkit-mask-image: url('img/mask.png');
+    -moz-mask-image: url('img/mask.png');
+    mask-image: url('img/mask.png');
     -webkit-mask-position: center right;
     -moz-mask-position: center right;
     mask-position: center center;
@@ -78,7 +78,7 @@
     right: 0;
     bottom: 0;
     background-color: #87807e;
-    background-image: url('pumpkin2.jpg');
+    background-image: url('img/pumpkin2.jpg');
     background-size: cover;
     /* center on eyes */
     background-position: 53% 33%;
