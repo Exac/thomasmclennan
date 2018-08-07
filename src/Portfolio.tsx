@@ -9,6 +9,10 @@ import mk480x480 from './img/mk@480x480.png';
 import mk720x480 from './img/mk@720x480.png';
 import skada480x480 from './img/skadainline@480x480.jpg';
 import skada720x130 from './img/skadainline@720x130.png';
+import tm480x480 from './img/tm@480x480.jpg';
+import tm720x480 from './img/tm@720x480.jpg';
+import ts480x480 from './img/ts@480x480.jpg';
+import ts720x480 from './img/ts@720x480.jpg';
 import './Portfolio.css';
 
 
@@ -40,6 +44,7 @@ class Portfolio extends React.Component {
                 "Bcrypt",
                 "Express",
                 "node-mailer",
+                "sass",
                 "PostgreSQL",
                 "Docker",
                 "Kubernetes",
@@ -71,7 +76,7 @@ class Portfolio extends React.Component {
             ],
             year: "2017-2018",
             company: "BC Speed Skating",
-            description: "Mark is a web app used by the BC Speed Skating Association to assist video referees in-province.",
+            description: "Mark is a web app used by the BC Speed Skating Association to assist video referees in-province. Updated project from Angular 2 to 4 during development.",
             imageSquare: mk480x480,
             imageWide: mk720x480
         },
@@ -96,6 +101,26 @@ class Portfolio extends React.Component {
             description: "Conbfuscate is a simple Heroku reflection service. A visitor to your site inputs their email and a message for you, then the Conbfuscate server is pinged over HTML and sends an email to you. Conbfuscate allows you to have users email you without knowing your email, and without paying for a back-end server. ",
             imageSquare: conbfuscate480x480,
             imageWide: conbfuscate720x480
+        },
+        {
+            title: "thomasmclennan.ca",
+            url: { 
+                code: "https://github.com/Exac/thomasmclennan",
+                live: "http://www.thomasmclennan.ca"
+            },
+            // tslint:disable-next-line:object-literal-sort-keys
+            tech: [
+                "React 16",
+                "TypeScript 3",
+                "TypeScript React Starter",
+                "css",
+                "Photoshop"
+            ],
+            year: "2018",
+            company: "Personal Project",
+            description: "My website, done with React 16 and TypeScript 3.",
+            imageSquare: tm480x480,
+            imageWide: tm720x480
         },
         {
             title: "Skada Inline",
@@ -128,13 +153,31 @@ class Portfolio extends React.Component {
                 "Shell Scripts",
                 "PHPUnit",
                 "HTML",
-                "CSS"
+                "CSS",
+                "Visio"
             ],
             year: "2016",
             company: "UFV, COMP 370: Software Engineering",
             description: "This is my term project for UFV's Software Engineering course. I worked in conjunction with Navi Gill, and  Farzin Dhanji. Easily the top project in the class. We ran the server at my house on an old laptop running CentOS.",
             imageSquare: chocan480x480,
             imageWide: chocan720x480
+        },
+        {
+            title: "Film Timesheets",
+            url: { 
+                code: null,
+                live: null
+            },
+            // tslint:disable-next-line:object-literal-sort-keys
+            tech: [
+                "Excel",
+                "Visual Basic"
+            ],
+            year: "2010-2018",
+            company: "Teamsters #155",
+            description: "The majority of TV shows and movies filmed in Vancouver use timesheets I wrote.",
+            imageSquare: ts480x480,
+            imageWide: ts720x480
         },
     ];
 
