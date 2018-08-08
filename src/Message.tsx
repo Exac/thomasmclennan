@@ -68,8 +68,7 @@ class Message extends React.Component<{}, IState> {
     public render() {
         return (
             <div className={"Message " + (this.sent ? "sent" : "")}>
-                <video playsInline={true} autoPlay={true} muted={true} loop={true} id="myVideo"
-                    style={{ position: 'fixed', left: 0, bottom: 0, minHeight: '100%', minWidth: '100%', animation: 'plane 10s ease-in-out infinite', zIndex:-1, pointerEvents: 'none'  }}>
+                <video playsInline={true} autoPlay={true} muted={true} loop={true} id="myVideo">
                     <source src="plane.mp4" type="video/mp4" />
                 </video>
                 <img className="Message__letterBack" src={letterBack} />
@@ -102,49 +101,6 @@ class Message extends React.Component<{}, IState> {
                         <span />
                     </p>
                 </form>
-                {/* <div className="success">
-                    <p>Your message successfully sent!<br /><img style={{ 'width': '4rem', 'padding': '2rem' }} src={mailsuccess} /></p>
-                    <div className="Message__how">
-                        <div className="how__top">
-                            <span className="how__hold" />
-                            <span className="how__hold" />
-                            <span className="how__hold" />
-                            <span className="how__hold" />
-                            <span className="how_time">{this.state.time}</span>
-                            <span className="how__hold" />
-                            <span className="how__hold" />
-                            <span className="how__hold" />
-                            <span className="how__hold" />
-                        </div>
-                        <div className="how__red">
-                            <span className="how__hold" />
-                            <div className="spacer" />
-                            <span className="how__hold" />
-                            <span className="how__hold" />
-                            <span className="how__hold" />
-                            <span className="how__hold" />
-                        </div>
-                        <div className="how__from">
-                            <div className="how__hold">msg from {this.state.email}</div>
-                            <div className="how__hold" style={{ 'gridRowStart': 'span 2', 'height': '1rem', }} />
-                            <div className="how__hold inbox">Inbox</div>
-                        </div>
-                        <div className="how__to">
-                            <div className="how__hold icon" />
-                            <div className="how__hold" />
-                            <div className="how__hold" style={{ 'gridRowStart': 'span 3' }} />
-                            <div className="how__hold" />
-                            <div className="how__hold" />
-                        </div>
-                        <div className="how__msg">
-                            <span className="mes">{this.state.message}</span>
-                        </div>
-                        <div className="how__bot">
-                            <div className="how__hold">Reply</div>
-                            <div className="how__hold">Forward</div>
-                        </div>
-                    </div>
-                </div> */}
             </div >
         )
     }

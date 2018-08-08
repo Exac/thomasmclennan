@@ -4,6 +4,19 @@
     background-color: white;
 }
 
+.Portfolio>* *:nth-child(2n){
+    animation: 0.3s crossfadeinfromleft ease;
+}
+.Portfolio>* *:nth-child(2n-1){
+    animation: 0.3s crossfadeinfromright ease;
+}
+.Portfolio>*:nth-child(2n){
+    animation: 0.3s crossfadeinfromright ease;
+}
+.Portfolio>*:nth-child(2n-1){
+    animation: 0.3s crossfadeinfromleft ease;
+}
+
 .name {
     grid-area: name;
 }
@@ -84,10 +97,37 @@
     background-image: url('svg/redgithublogo.svg');
 }
 
+.Portfolio p {
+    line-height: 1.5em;
+    letter-spacing: 115%;
+}
+
 @media screen and (max-width: 800px) {
     .Portfolio>section {
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
         grid-template-areas: "image image" "name description";
+    }
+}
+
+@keyframes crossfadeinfromleft {
+    from {
+        transform: translateX(-20%);
+        opacity: 0.66;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes crossfadeinfromright {
+    from {
+        transform: translateX(120%);
+        opacity: 0.66;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
     }
 }

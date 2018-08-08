@@ -14,12 +14,22 @@
   align-items: center;
   width: 100vw;
   background-color: #4d2f43;
-  color: #CBD4E7;
+  color: #CBD4E7 !important;
   position: fixed;
   bottom: 0;
   height: 10vh;
   min-height: 36px;
   z-index: 99;
+  animation: slideup 0.75s ease;
+}
+
+@keyframes slideup {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .App__bottom>* {

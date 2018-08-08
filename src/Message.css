@@ -11,7 +11,7 @@
 
 .Message::before {
     content: '';
-    background-color: #29071d;
+    background-image: linear-gradient(#6e7f8e, #757d80, #4a555b);
     position: fixed;
     left: 0;
     right: 0;

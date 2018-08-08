@@ -5,8 +5,8 @@ import chollima480x480 from './img/chollima2@480x480.jpg';
 import chollima720x480 from './img/chollima2@720x480.jpg';
 import conbfuscate480x480 from './img/conbfuscate@480x480.png';
 import conbfuscate720x480 from './img/conbfuscate@720x480.png';
-import mk480x480 from './img/mk@480x480.png';
-import mk720x480 from './img/mk@720x480.png';
+import mk480x480 from './img/mk@480x480.jpg';
+import mk720x480 from './img/mk@720x480.jpg';
 import skada480x480 from './img/skadainline@480x480.jpg';
 import skada720x130 from './img/skadainline@720x130.png';
 import tm480x480 from './img/tm@480x480.jpg';
@@ -21,7 +21,7 @@ class Portfolio extends React.Component {
     private projects: any[] = [
         {
             title: "Chollima",
-            url: { 
+            url: {
                 code: "https://github.com/exac/comp-manager",
                 live: null
             },
@@ -54,15 +54,19 @@ class Portfolio extends React.Component {
             ],
             year: "2018",
             company: "BC Speed Skating",
-            description: "Chollima is a fully-fledged meet management app for speed skating competitions.",
+            description: "Chollima is a fully-fledged meet management app for speed skating "
+                + "competitions written with PostgreSQL/Express/Angular 6/Node.js. This is a large "
+                + "project that required a lot of planning. The project's code is split into the "
+                + "<a href='https://github.com/exac/comp-manager'>front-end</a> and the "
+                + "<a href='https://github.com/exac/comp-manager-api'>back-end</a>.",
             imageSquare: chollima480x480,
             imageWide: chollima720x480
         },
         {
             title: "MK App",
-            url: { 
+            url: {
                 code: "https://github.com/exac/mark-prod",
-                live: "http://mk.thomasmclennan.ca"
+                live: "http://mk.thomasmclennan.ca",
             },
             // tslint:disable-next-line:object-literal-sort-keys
             tech: [
@@ -76,13 +80,15 @@ class Portfolio extends React.Component {
             ],
             year: "2017-2018",
             company: "BC Speed Skating",
-            description: "Mark is a web app used by the BC Speed Skating Association to assist video referees in-province. Updated project from Angular 2 to 4 during development.",
+            description: "Mark is a web app used by the BC Speed Skating Association to "
+                + "assist video referees in-province. Updated project from Angular 2 to 4 "
+                + "during development.",
             imageSquare: mk480x480,
             imageWide: mk720x480
         },
         {
             title: "Conbfuscate",
-            url: { 
+            url: {
                 code: "https://github.com/exac/conbfuscate",
                 live: null
             },
@@ -98,13 +104,17 @@ class Portfolio extends React.Component {
             ],
             year: "2018",
             company: "Open Source",
-            description: "Conbfuscate is a simple Heroku reflection service. A visitor to your site inputs their email and a message for you, then the Conbfuscate server is pinged over HTML and sends an email to you. Conbfuscate allows you to have users email you without knowing your email, and without paying for a back-end server. ",
+            description: "Conbfuscate is a simple Heroku reflection service. A visitor to "
+                + "your site inputs their email and a message for you, then the Conbfuscate "
+                + "server is pinged over HTML and sends an email to you. Conbfuscate allows you "
+                + "to have users email you without knowing your email, and without paying for a "
+                + "back-end server. ",
             imageSquare: conbfuscate480x480,
             imageWide: conbfuscate720x480
         },
         {
             title: "thomasmclennan.ca",
-            url: { 
+            url: {
                 code: "https://github.com/Exac/thomasmclennan",
                 live: "http://www.thomasmclennan.ca"
             },
@@ -124,9 +134,9 @@ class Portfolio extends React.Component {
         },
         {
             title: "Skada Inline",
-            url: { 
+            url: {
                 code: "https://github.com/exac/skadainline",
-                live: "https://www.curseforge.com/wow/addons/skada"
+                live: "https://www.wowace.com/projects/skada"
             },
             // tslint:disable-next-line:object-literal-sort-keys
             tech: [
@@ -134,13 +144,15 @@ class Portfolio extends React.Component {
             ],
             year: "2016",
             company: "Open Source",
-            description: "SkadaInline is a WoW Addon that has been downloaded 11 million times since I released it. It displays data to players in a minimalistic fashion. In June 2016, Skada Inline was merged into the mainline addon.",
+            description: "SkadaInline is a WoW Addon that has been downloaded 11 million times "
+                + "since I released it. It displays data to players in a minimalistic fashion. In "
+                + "June 2016, Skada Inline was merged into the mainline addon.",
             imageSquare: skada480x480,
             imageWide: skada720x130
         },
         {
             title: "Chocoholics Anonymous",
-            url: { 
+            url: {
                 code: "https://github.com/Exac/COMP370",
                 live: null
             },
@@ -154,17 +166,20 @@ class Portfolio extends React.Component {
                 "PHPUnit",
                 "HTML",
                 "CSS",
-                "Visio"
+                "Visio",
+                "JavaScript"
             ],
             year: "2016",
             company: "UFV, COMP 370: Software Engineering",
-            description: "This is my term project for UFV's Software Engineering course. I worked in conjunction with Navi Gill, and  Farzin Dhanji. Easily the top project in the class. We ran the server at my house on an old laptop running CentOS.",
+            description: "This is my term project for UFV's Software Engineering course. I worked "
+                + "in conjunction with Navi Gill, and  Farzin Dhanji. Easily the top project in "
+                + "the class. We ran the server at my house on an old laptop running CentOS.",
             imageSquare: chocan480x480,
             imageWide: chocan720x480
         },
         {
             title: "Film Timesheets",
-            url: { 
+            url: {
                 code: null,
                 live: null
             },
@@ -175,7 +190,10 @@ class Portfolio extends React.Component {
             ],
             year: "2010-2018",
             company: "Teamsters #155",
-            description: "The majority of TV shows and movies filmed in Vancouver use timesheets I wrote.",
+            description: "The majority of TV shows and movies filmed in Vancouver use timesheets I wrote. "
+                + "They fill a very specific niche, where crews rotate daily and timesheets are filled out in "
+                + "the field. I provide support to users over the phone and in-person. I also coach office "
+                + "assistants in the use of &#x395;xcel",
             imageSquare: ts480x480,
             imageWide: ts720x480
         },
@@ -188,12 +206,12 @@ class Portfolio extends React.Component {
                     <section className="name">
                         <h2>{project.title}</h2>
                         <p>{project.year}, {project.company}</p>
-                        <a className="code" href={project.url.code ? project.url.code : ""}/>
-                        <a className="live" href={project.url.live ? project.url.live : ""}/>
+                        <a className="code" href={project.url.code ? project.url.code : ""} />
+                        <a className="live" href={project.url.live ? project.url.live : ""} />
                         {this.createUl(project.tech)}
                     </section>
                     <section className="description">
-                        <p>{project.description}</p>
+                        <p dangerouslySetInnerHTML={{ __html: project.description }} />
                     </section>
                     <section className="image">
                         <picture>
